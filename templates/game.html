@@ -1,10 +1,40 @@
 {% extends "base.html" %}
-
 {% block content %}
-<i>Gess a Number betwween 0 and 100</i>
-<input type="text" name="gessTxt" placeholder="0"><br>
-<button id="btn">try</button>
-<button id="endbtn" onclick="location='/'">out</button>
+<body>
+    <div class="container">
+        <h1>Let's Play</h1>
+  
+        <div class="dice">
+            <p class="name">{{name}}noussair</p>
+            <img class="img1" src="/static/image/dice-6.png">
+        </div>
+  
+    </div>
+  
+    <div class="container bottom">
+        <button type="button" class="butn"
+            onClick="rollTheDice()">
+            Roll
+        </button>
+    </div>
+    <div class="container bottom">
+        <button type="button" class="butn" 
+            onClick="location='/'">
+        New Games
+        </button>
+    </div>
+    
+    <div class="container bottom">
+        <button type="button" class="butn" 
+            onClick="location='/'">
+        out
+        </button>
+    </div>
+    <div class="Score">
+        <p>Your Score:</p><br>
+    </div>
+
+</body>
 
 
 {% endblock content %}

@@ -5,7 +5,9 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template("index.html")
+    if request.method == "POST":
+        name = request.args.get("nom")
+    return render_template("index.html", name=name)
 
 
 @app.route('/game', methods=['GET', 'POST'])
